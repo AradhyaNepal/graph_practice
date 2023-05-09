@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-class DoubleDoughnut extends StatelessWidget {
+class DoubleFirstDoughnut extends StatelessWidget {
   final double outerValue;
   final double innerValue;
 
-  const DoubleDoughnut({required this.outerValue,required this.innerValue, Key? key}) : super(key: key);
+  const DoubleFirstDoughnut({required this.outerValue,required this.innerValue, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,8 @@ class DoubleDoughnut extends StatelessWidget {
                 children: [
                   Transform.rotate(
                     angle: _getRadianFromAngle(120),
-                    child: SfCircularChart(series: [
+                    child: SfCircularChart(
+                        series: [
                       DoughnutSeries<_ChartData, String>(
                         radius: "200",
                         innerRadius:"125",
