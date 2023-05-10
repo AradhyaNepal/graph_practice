@@ -21,6 +21,43 @@ class DoubleSecondDoughnut extends StatelessWidget {
   final List<DoubleData> data;
 
   const DoubleSecondDoughnut({required this.data, Key? key}) : super(key: key);
+  factory DoubleSecondDoughnut.load()=>DoubleSecondDoughnut(data: [
+    DoubleData(
+      heading: 'Value 1',
+      value: 200,
+      color: Colors.red,
+    ),
+    DoubleData(
+      heading: 'Value 2',
+      value: 100,
+      color: Colors.green,
+    ),
+    DoubleData(
+      heading: 'Value 3',
+      value: 150,
+      color: Colors.blue,
+    ),
+    DoubleData(
+      heading: 'Value 4',
+      value: 221,
+      color: Colors.grey,
+    ),
+    DoubleData(
+      heading: 'Value 5',
+      value: 125,
+      color: Colors.yellow,
+    ),
+    DoubleData(
+      heading: 'Value 6',
+      value: 125,
+      color: Colors.pink,
+    ),
+    DoubleData(
+      heading: 'Value 7',
+      value: 125,
+      color: Colors.black,
+    ),
+  ]);
 
   @override
   Widget build(BuildContext context) {
