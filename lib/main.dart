@@ -18,15 +18,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SingleChildScrollView(
-        child: Column(
-          children: [
-            const DoubleFirstDoughnut(outerValue: 10, innerValue: 30),
-            DoubleSecondDoughnut.load(),
-            const SingleDoughnut(totalPercentage: 70, expectedPercentage: 90),
-            WeirdLineChart.load(),
-          ],
-        ),
+      home: PageView(
+        scrollDirection: Axis.vertical,
+        children: [
+          const DoubleFirstDoughnut(outerValue: 10, innerValue: 10),
+          DoubleSecondDoughnut.load(),
+          const SingleDoughnut(totalPercentage: 70, expectedPercentage: 90),
+          WeirdLineChart.load(),
+        ],
       ),
     );
   }

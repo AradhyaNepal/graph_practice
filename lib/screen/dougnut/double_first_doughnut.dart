@@ -22,23 +22,23 @@ class DoubleFirstDoughnut extends StatelessWidget {
                     angle: _getRadianFromAngle(120),
                     child: SfCircularChart(
                         series: [
-                      DoughnutSeries<_ChartData, String>(
-                        radius: "200",
-                        innerRadius:"125",
-                        pointColorMapper: (_, i)
-                        {
-                          return i == 0 ? Colors.blue : Colors.transparent;
-                        },
-                        dataSource: [
-                          _ChartData('', outerValue),
-                          _ChartData('', 100-outerValue),
-                        ],
-                        xValueMapper: (_ChartData data, _) => data.x,
-                        yValueMapper: (_ChartData data, _) => data.y,
-                        name: 'Available',
-                      ),
+                          DoughnutSeries<_ChartData, String>(
+                            radius: "200",
+                            innerRadius:"125",
+                            pointColorMapper: (_, i)
+                            {
+                              return i == 0 ? Colors.blue : Colors.transparent;
+                            },
+                            dataSource: [
+                              _ChartData('', outerValue),
+                              _ChartData('', 100-outerValue),
+                            ],
+                            xValueMapper: (_ChartData data, _) => data.x,
+                            yValueMapper: (_ChartData data, _) => data.y,
+                            name: 'Available',
+                          ),
 
-                    ]),
+                        ]),
                   ),
                   Transform.rotate(
                     angle: _getRadianFromAngle(60),
@@ -70,6 +70,7 @@ class DoubleFirstDoughnut extends StatelessWidget {
 
   double _getRadianFromAngle(double angle) => angle*((22/7)/180);
 }
+
 
 class _ChartData {
   _ChartData(this.x, this.y);

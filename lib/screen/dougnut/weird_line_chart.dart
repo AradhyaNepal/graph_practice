@@ -107,7 +107,7 @@ class WeirdLineChart extends StatelessWidget {
         min = e.y;
       }
     }
-    return max.toInt() + 1;
+    return max.toInt();
   }
 
   /// Returns the list of chart series
