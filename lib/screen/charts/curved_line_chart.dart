@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-class WeirdLineChart extends StatelessWidget {
+class CurvedLineChart extends StatelessWidget {
   final List<_ChartData> chartData;
 
-  const WeirdLineChart({required this.chartData, Key? key}) : super(key: key);
+  const CurvedLineChart({required this.chartData, Key? key}) : super(key: key);
 
-  factory WeirdLineChart.load() => WeirdLineChart(
+  factory CurvedLineChart.load() => CurvedLineChart(
         chartData: [
           _ChartData('-1', 50),
           _ChartData('0', 60),

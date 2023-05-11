@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:graph_practice/screen/dougnut/double_first_doughnut.dart';
-import 'package:graph_practice/screen/dougnut/double_second_doughnut.dart';
-import 'package:graph_practice/screen/dougnut/single_dougnut.dart';
-import 'package:graph_practice/screen/dougnut/weird_line_chart.dart';
+import 'package:graph_practice/screen/charts/bar_graph.dart';
+import 'package:graph_practice/screen/charts/circular_progress.dart';
+import 'package:graph_practice/screen/charts/curved_line_chart.dart';
+import 'package:graph_practice/screen/charts/double_first_doughnut.dart';
+import 'package:graph_practice/screen/charts/double_second_doughnut.dart';
+import 'package:graph_practice/screen/charts/income_vs_expense.dart';
+import 'package:graph_practice/screen/charts/multiple_line_chart.dart';
+import 'package:graph_practice/screen/charts/single_dougnut.dart';
+import 'package:graph_practice/screen/charts/stack_bar_graph.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,10 +26,14 @@ class MyApp extends StatelessWidget {
       home: PageView(
         scrollDirection: Axis.vertical,
         children: [
-          const DoubleFirstDoughnut(outerValue: 10, innerValue: 10),
+          const DoubleFirstDoughnut(outerValue: 67, innerValue: 40),
           DoubleSecondDoughnut.load(),
           const SingleDoughnut(totalPercentage: 70, expectedPercentage: 90),
-          WeirdLineChart.load(),
+          CurvedLineChart.load(),
+          const MultipleLineChart(),
+          BarGraph(),
+          const IncomeVsExpenseChart(),
+          const StackBarGraph(),
         ],
       ),
     );
